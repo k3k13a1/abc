@@ -53,6 +53,17 @@ func main() {
 	var floor int = 8
 	var hasElevator bool = true
 
+	fmt.Println("Введите вес груза (в кг):")
+	fmt.Scan(&weight)
+
+	fmt.Println("Введите этаж:")
+	fmt.Scan(&floor)
+
+	fmt.Println("Есть ли лифт? (1 - да, 0 - нет):")
+	var elevatorInput int
+	fmt.Scan(&elevatorInput)
+	hasElevator = elevatorInput == 1
+
 	// Создание объекта Cargo
 	cargo := Cargo{
 		Weight:      weight,
